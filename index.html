@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>SAPA, vjetnamiešu un Āzijas restorāns Rīgā (dizaina priekšlikums)</title>
+<meta name="description" content="Dizaina priekšlikums restorānam SAPA Skolas ielā 12, Rīgā. Nav restorāna oficiālā lapa.">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#161413;
+  --night2:#201d1b;
+  --pit:#0c0b0a;
+  --on:#f4f2ed;
+  --on2:#bdb8ae;
+  --on3:#8d887f;
+  --rule-d:rgba(255,255,255,.14);
+  --paper:#f3f4f1;
+  --stone:#e7e9e3;
+  --ink:#161614;
+  --ink2:#44463f;
+  --mute:#6c6f66;
+  --rule:#d3d6ce;
+  --lime:#c6e24e;
+  --lime2:#b4d23a;
+  --clay:#d09a82; /* the brown of their own SAPA lettering, lifted for dark ground */
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.04rem/1.55 var(--sans);font-stretch:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,figure,blockquote,dl,dd{margin:0}
+p{text-wrap:pretty}
+[data-lang][hidden]{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.nw{white-space:nowrap}
+.pho{margin-right:.09em} /* the horn of ở eats the narrow word space that follows */
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+::selection{background:var(--lime);color:#14150f}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+/* concept notice */
+.notice{background:var(--pit);color:#a8a39a;font-size:.76rem;line-height:1.35;padding:8px 20px;text-align:center}
+.notice b{color:#ece8e0;font-weight:600}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:54px;padding:0 22px;background:var(--lime);color:#14150f;font:700 1.02rem/1 var(--sans);letter-spacing:.005em;text-decoration:none;border:0;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--lime2)}
+.btn svg{width:.82em;height:.82em;flex:none}
+.btn.line{background:none;color:var(--on);box-shadow:inset 0 0 0 1px rgba(255,255,255,.34);font-weight:600}
+.btn.line:hover{box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:#000}
+
+/* the name: set light and wide in their brown, with the hat from their own sign drawn above the last letter */
+.mark{display:inline-block;color:var(--clay);text-decoration:none;font-weight:340;font-stretch:125%;font-size:1.46rem;letter-spacing:.15em;line-height:1;white-space:nowrap}
+.cap{position:relative;display:inline-block}
+.cap svg{position:absolute;left:-.3em;bottom:.79em;width:1.5em;height:auto;overflow:visible;pointer-events:none}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--on);overflow:hidden}
+.top{position:absolute;z-index:3;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.nav{display:none}
+.lang{display:flex;margin-right:-10px}
+.lang button{appearance:none;-webkit-appearance:none;background:none;border:0;min-height:44px;padding:0 10px;font:600 .8rem/1 var(--sans);letter-spacing:.1em;color:rgba(255,255,255,.62);cursor:pointer}
+.lang button span{display:inline-block;padding:5px 0;border-bottom:2px solid transparent}
+.lang button[aria-pressed=true]{color:#fff}
+.lang button[aria-pressed=true] span{border-color:var(--lime)}
+.shot img{width:100%;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.pitch{position:relative;z-index:2;margin-top:-12px;padding:0 20px 46px}
+h1{font-weight:760;font-stretch:72%;font-size:clamp(2.85rem,13.4vw,3.6rem);line-height:.97;letter-spacing:-.004em;text-wrap:balance}
+.lead{margin-top:16px;color:var(--on2);max-width:31em}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.acts .btn{flex:1 1 auto}
+@media(max-width:599px){.acts{gap:8px}.acts .btn{padding:0 14px}}
+@media(max-width:389px){.acts .num{display:none}}
+.open{display:flex;align-items:center;gap:9px;margin-top:18px;font-size:.93rem;color:var(--on2)}
+.open i{flex:none;width:8px;height:8px;border-radius:50%;background:#6d6860}
+.open.is-open i{background:var(--lime)}
+
+/* menu */
+.menu{padding:64px 0 72px}
+h2{font-weight:740;font-stretch:72%;font-size:clamp(2.3rem,10.4vw,2.9rem);line-height:1;letter-spacing:-.004em;text-wrap:balance}
+h3{font-weight:700;font-stretch:78%;font-size:1.55rem;line-height:1.08}
+.pr{font-weight:650;font-stretch:76%;font-size:1.45rem;line-height:1;white-space:nowrap}
+
+/* phở: the photograph of what stands next to the bowl, what they say about it, what it costs */
+.feature{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+.side img{width:100%}
+.side figcaption{margin-top:9px;color:var(--mute);font-size:.86rem}
+.about p{color:var(--ink2);max-width:34em}
+.sizes{width:100%;margin-top:24px;border-collapse:collapse}
+.sizes th,.sizes td{padding:12px 0;border-top:1px solid var(--rule);font-weight:400;text-align:left;vertical-align:baseline}
+.sizes thead td{padding:0;border-top:0}
+.sizes thead th{padding:0 0 9px;border-top:0;font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);text-align:right}
+.sizes tbody tr:last-child>*{border-bottom:1px solid var(--rule)}
+.sizes tbody td{width:5.1rem;text-align:right}
+
+.dishes{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;margin-top:52px}
+.dish img{width:100%}
+.dish figcaption{margin-top:14px}
+.dish p{margin-top:5px;color:var(--ink2);font-size:.98rem}
+.dish .pr{margin-top:9px;font-size:1.45rem;color:var(--ink)}
+/* the two curries are one pair: side by side on a phone as well */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.duo figcaption{margin-top:11px}
+.duo h3{font-size:1.3rem}
+.duo .pr{font-size:1.3rem}
+/* lunch: the two photographs on dark cloth belong to it */
+.lunch{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;padding-top:36px;border-top:1px solid var(--rule)}
+.l-text h3{font-size:1.95rem}
+.l-text p{margin-top:10px;color:var(--ink2);max-width:30em}
+.l-text .pr{margin-top:16px;font-size:2.5rem;color:var(--ink)}
+.after{margin-top:44px;padding-top:26px;border-top:1px solid var(--rule)}
+.after .also{font-size:1.08rem;max-width:32em}
+.after .small{margin-top:12px;color:var(--mute);font-size:.9rem;max-width:36em}
+.after .btn{margin-top:24px;width:100%}
+
+/* guests */
+.guests{background:var(--stone);padding:60px 0 64px}
+.q{margin-top:28px}
+.q p{font-size:1.16rem;line-height:1.45}
+.q cite{display:block;margin-top:8px;font-style:normal;font-size:.88rem;color:var(--mute)}
+.scores{margin-top:36px;border-top:1px solid #cdd0c7}
+.scores div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #cdd0c7}
+.scores dt{font-size:.93rem;color:var(--ink2)}
+.scores dd{font-weight:650;font-stretch:76%;font-size:1.7rem;line-height:1;white-space:nowrap}
+.scores dd small{margin-left:.4em;font-weight:400;font-stretch:100%;font-size:.9rem;color:var(--mute)}
+
+/* visit */
+.visit{background:var(--night);color:var(--on);padding:64px 0 72px}
+.visit h2{font-size:clamp(2.7rem,12.4vw,3.4rem)}
+.city{margin-top:8px;color:var(--on2)}
+.hours{margin-top:34px;border-top:1px solid var(--rule-d)}
+.hours div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule-d);color:var(--on2)}
+.hours dt{font-size:.98rem}
+.hours dd{font-weight:650;font-stretch:76%;font-size:1.7rem;line-height:1;white-space:nowrap}
+.hours .today{color:#fff}
+.tel{margin-top:30px}
+.tel small{display:block;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--on3)}
+.tel a{display:inline-block;margin-top:4px;font-weight:700;font-stretch:76%;font-size:2.5rem;line-height:1.1;text-decoration:none}
+.src{margin-top:22px;color:var(--on3);font-size:.86rem;max-width:34em}
+
+.table{margin-top:52px;background:var(--night2);padding:28px 20px 30px}
+.table h3{font-size:1.9rem}
+.table .how{margin-top:8px;color:var(--on2);font-size:.96rem}
+.field{margin-top:22px}
+.field label,.field .lab{display:block;margin-bottom:8px;font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--on3)}
+.field input,.field select{display:block;width:100%;min-height:52px;margin:0;padding:0 14px;background:var(--night);border:1px solid rgba(255,255,255,.2);border-radius:0;color:var(--on);font:500 1.06rem/1.2 var(--sans);color-scheme:dark;-webkit-appearance:none;appearance:none}
+.field select{padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23bdb8ae' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px}
+.field input:focus,.field select:focus,.step button:focus-visible{outline:2px solid var(--lime);outline-offset:1px}
+.field input.need{border-color:#e9795e}
+.two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:12px}
+.step{display:flex;align-items:center}
+.step button{flex:none;width:52px;height:52px;padding:0;background:var(--night);border:1px solid rgba(255,255,255,.2);border-radius:0;color:var(--on);font:500 1.5rem/1 var(--sans);cursor:pointer}
+.step output{min-width:70px;text-align:center;font-weight:700;font-stretch:76%;font-size:1.9rem;line-height:1}
+.msg{margin-top:24px;padding-left:14px;border-left:2px solid var(--lime);color:var(--on2);font-size:.93rem;line-height:1.5;white-space:pre-line}
+.table .btn{width:100%;margin-top:22px}
+.dk{display:none}
+@media(hover:hover) and (pointer:fine) and (min-width:861px){.ph{display:none}.dk{display:inline}}
+.fine{margin-top:14px;color:var(--on3);font-size:.84rem}
+.fine a{color:var(--on2)}
+
+/* footer */
+footer{background:var(--pit);color:#a8a39a;padding:52px 0 56px;font-size:.9rem}
+.f-name .mark{font-size:1.4rem}
+.f-own{margin-top:16px;color:#ece8e0;font-weight:600;font-stretch:76%;font-size:1.3rem;line-height:1.1}
+.f-addr{margin-top:10px}
+.f-links{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:22px}
+.f-links a{color:#ece8e0;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:4px;padding:6px 0}
+.f-note{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);max-width:46em}
+.f-note p+p{margin-top:10px}
+.f-note b{color:#ece8e0;font-weight:600}
+.f-note a{color:#ece8e0}
+
+@media(min-width:600px) and (max-width:860px){
+  .top{padding-left:max(20px,calc((100vw - 680px)/2 + 20px));padding-right:max(20px,calc((100vw - 680px)/2 + 20px))}
+  .shot{max-width:560px;margin:0 auto}
+  .shot img{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%);mask-composite:intersect}
+  .pitch{max-width:680px;margin-left:auto;margin-right:auto}
+  .wrap{max-width:680px}
+  .acts .btn{flex:0 0 auto}
+  .after .btn{width:auto}
+  .duo{gap:20px}
+  .duo h3{font-size:1.55rem}
+  .lunch{grid-template-columns:minmax(0,1.126fr) minmax(0,1.333fr);gap:30px 20px}
+  .l-text{grid-column:1 / -1}
+}
+@media(min-width:861px){
+  body{font-size:1.08rem}
+  .wrap{padding:0 40px}
+  .notice{font-size:.8rem}
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;min-height:min(800px,calc(100vh - 34px))}
+  .top{justify-content:flex-start;padding:20px 40px 20px max(40px,calc((100vw - 1180px)/2 + 40px))}
+  .mark{font-size:1.62rem}
+  .nav{display:flex;gap:30px;margin-left:46px}
+  .nav a{padding:8px 0;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.74);text-decoration:none}
+  .nav a:hover{color:#fff}
+  .lang{margin-left:auto}
+  .shot{grid-column:2;grid-row:1;align-self:stretch;min-height:640px}
+  .shot picture{display:block;height:100%}
+  .shot img{height:100%;object-fit:cover;object-position:72% 34%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
+  .pitch{grid-column:1;grid-row:1;margin:0;padding:110px 0 70px max(40px,calc((100vw - 1180px)/2 + 40px))}
+  h1{font-size:clamp(3.6rem,5.2vw,4.9rem);line-height:.95;margin-right:-40px}
+  .lead{margin-top:24px;font-size:1.16rem;max-width:26em}
+  .acts{margin-top:32px}
+  .acts .btn{flex:0 0 auto;min-height:58px;padding:0 28px}
+  .open{margin-top:22px}
+
+  .menu{padding:110px 0 120px}
+  h2{font-size:clamp(3rem,4.6vw,4.2rem);line-height:.98}
+  h3{font-size:1.75rem}
+  .feature{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr;gap:30px 64px;align-items:start}
+  .feature h2{grid-column:1;grid-row:1}
+  .about{grid-column:1;grid-row:2}
+  .side{grid-column:2;grid-row:1 / span 2}
+  .about p{font-size:1.14rem}
+  .sizes{margin-top:30px}
+  .sizes tbody td{width:6rem}
+  .pr,.dish .pr{font-size:1.6rem}
+  .dishes{grid-template-columns:repeat(12,minmax(0,1fr));gap:64px 28px;margin-top:84px}
+  .dish{grid-column:span 4}
+  .duo{display:contents}
+  .duo h3{font-size:1.75rem}
+  .duo .pr{font-size:1.6rem}
+  .duo figcaption{margin-top:14px}
+  .lunch{grid-column:1 / -1;grid-template-columns:minmax(0,.84fr) minmax(0,1.126fr) minmax(0,1.333fr);gap:28px;padding-top:44px}
+  .lunch .dish{grid-column:auto}
+  .l-text{padding-right:8px}
+  .l-text h3{font-size:2.3rem}
+  .l-text .pr{font-size:3.1rem;margin-top:20px}
+  .after{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 60px;align-items:center;margin-top:76px;padding-top:34px}
+  .after .btn{grid-column:2;grid-row:1 / span 2;width:auto;margin:0;min-height:58px;padding:0 28px}
+  .after .small{margin-top:0}
+
+  .guests{padding:104px 0 110px}
+  .g-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr;column-gap:64px;align-items:start}
+  .g-head{grid-column:1;grid-row:1}
+  .scores{grid-column:1;grid-row:2;margin-top:40px}
+  .g-quotes{grid-column:2;grid-row:1 / span 2}
+  .g-quotes .q:first-child{margin-top:10px}
+  .q{margin-top:34px}
+  .q p{font-size:1.3rem}
+  .scores dd{font-size:2rem}
+
+  .visit{padding:110px 0 120px}
+  .v-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:84px;align-items:start}
+  .visit h2{font-size:clamp(3.6rem,5.6vw,5.2rem)}
+  .hours dd{font-size:2rem}
+  .tel a{font-size:3rem}
+  .visit .acts .btn{flex:0 0 auto}
+  .table{margin-top:0;padding:38px 36px 40px}
+  footer{padding:64px 0 72px}
+  .f-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:76px}
+  .f-note{margin-top:0;padding-top:0;border-top:0}
+}
+/* small laptops and tablets on their side: keep the whole bowl in frame and the language switch off the photograph */
+@media(min-width:861px) and (max-width:1200px){
+  .hero{min-height:min(660px,calc(100vh - 34px))}
+  .shot{min-height:560px}
+  .shot img{object-position:80% 34%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 13%);mask-image:linear-gradient(to right,transparent 0,#000 13%)}
+  h1{margin-right:0}
+  .nav{gap:22px;margin-left:30px}
+  .lang{margin-left:12px}
+  .v-grid{gap:48px}
+}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita:</b> <span data-lang="lv">Dizaina priekšlikums, nav SAPA oficiālā lapa.</span><span data-lang="en" hidden>Design proposal, not SAPA’s official website.</span></div>
+
+<header class="hero">
+  <div class="top">
+    <a class="mark" href="#top" aria-label="SAPA">SAP<span class="cap">A<svg viewBox="0 0 44 20" aria-hidden="true"><g fill="currentColor"><path d="M27 1 1.7 11.6l7 1z"/><path d="M27 1 10.1 12.8l7 1z"/><path d="M27 1l-8.5 13 7 1z"/><path d="M27 1l-.1 14.2 7 1z"/><path d="M27 1l8.3 15.4 7 1z"/></g><path d="M1 12.4Q21 21 43 18.4" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/></svg></span></a>
+    <nav class="nav" aria-label="Lapas daļas"><a href="#edieni"><span data-lang="lv">Ēdieni</span><span data-lang="en" hidden>Food</span></a><a href="#viesi"><span data-lang="lv">Viesi</span><span data-lang="en" hidden>Guests</span></a><a href="#visit"><span data-lang="lv">Kur atrast</span><span data-lang="en" hidden>Find us</span></a></nav>
+    <div class="lang" role="group" aria-label="Valoda, language"><button type="button" data-set="lv" aria-pressed="true"><span>LV</span></button><button type="button" data-set="en" aria-pressed="false"><span>EN</span></button></div>
+  </div>
+  <figure class="shot" id="top">
+    <picture>
+      <source media="(max-width:860px)" srcset="img/pho-m.jpg" width="1170" height="1139">
+      <img src="img/pho.jpg" width="1500" height="1413" fetchpriority="high" alt="Phở bļoda no augšas: rīsu nūdeles, liellopu gaļa, sīpoli un zaļumi, blakus čili un kanēlis" data-alt-en="A bowl of phở from above: rice noodles, beef, onion and herbs, with chili and cinnamon beside it">
+    </picture>
+  </figure>
+  <div class="pitch">
+    <h1><span data-lang="lv"><span class="pho">Phở</span> un Āzijas virtuve Rīgas centrā</span><span data-lang="en" hidden><span class="pho">Phở</span> and Asian cooking in central Rīga</span></h1>
+    <p class="lead"><span data-lang="lv">Zupas, rullīši, karijs un rīsu ēdieni Skolas ielā&nbsp;12. Ēdiet uz vietas vai pasūtiet uz mājām ar Wolt.</span><span data-lang="en" hidden>Soups, rolls, curry and rice dishes at Skolas iela&nbsp;12. Eat in, or get it delivered through Wolt.</span></p>
+    <div class="acts">
+      <a class="btn" href="https://wolt.com/en/lva/riga/restaurant/sapa-vjetnamiesu-azijas-restorans" target="_blank" rel="noopener"><span data-lang="lv">Pasūtīt ar Wolt</span><span data-lang="en" hidden>Order on Wolt</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M3.5 2H10v6.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a>
+      <a class="btn line" href="tel:+37128326666"><span data-lang="lv">Zvanīt<span class="num"> 28&nbsp;326&nbsp;666</span></span><span data-lang="en" hidden>Call<span class="num"> 28&nbsp;326&nbsp;666</span></span></a>
+    </div>
+    <p class="open" data-open><i></i><span><span data-lang="lv">Katru dienu līdz 22:00</span><span data-lang="en" hidden>Every day until 22:00</span></span></p>
+  </div>
+</header>
+
+<main>
+<section class="menu" id="edieni">
+  <div class="wrap">
+    <div class="feature">
+      <h2><span data-lang="lv"><span class="pho">Phở</span> ir mājas specialitāte</span><span data-lang="en" hidden><span class="pho">Phở</span> is the house speciality</span></h2>
+      <figure class="side">
+        <img src="img/pho-side.jpg" width="1200" height="899" loading="lazy" alt="Blakus phở bļodai: bazilika un citu zaļumu lapas, sojas asni, laima daiviņas, čili un sarkani irbulīši uz tumša galda" data-alt-en="Next to the phở bowl: basil and other herbs, bean sprouts, lime wedges, chili and red chopsticks on a dark table">
+        <figcaption><span data-lang="lv">SAPA fotogrāfijā blakus bļodai: zaļumi, sojas asni, laims un čili.</span><span data-lang="en" hidden>Next to the bowl in SAPA’s photograph: herbs, bean sprouts, lime and chili.</span></figcaption>
+      </figure>
+      <div class="about">
+        <p><span data-lang="lv">Dzidrs, saldens buljons, kas vairākas stundas vārīts uz kauliem, rīsu nūdeles, liellopu gaļa vai vista, sīpoli, ingvers un svaigi garšaugi. Tā phở apraksta pati SAPA un piebilst, ka būt Rīgā un to nenogaršot tiešām būtu žēl.</span><span data-lang="en" hidden>A clear, slightly sweet broth simmered on bones for several hours, rice noodles, beef or chicken, onion, ginger and fresh herbs. That is how SAPA describes its own phở, adding that being in Rīga without trying it really would be a pity.</span></p>
+        <table class="sizes">
+          <caption class="vh"><span data-lang="lv">Phở cenas</span><span data-lang="en" hidden>Phở prices</span></caption>
+          <thead><tr><td></td><th scope="col"><span data-lang="lv">Mazā</span><span data-lang="en" hidden>Small</span></th><th scope="col"><span data-lang="lv">Lielā</span><span data-lang="en" hidden>Large</span></th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span data-lang="lv">Ar liellopu gaļu</span><span data-lang="en" hidden>With beef</span></th><td class="pr"><span data-lang="lv">8,80&nbsp;€</span><span data-lang="en" hidden>€8.80</span></td><td class="pr"><span data-lang="lv">9,60&nbsp;€</span><span data-lang="en" hidden>€9.60</span></td></tr>
+            <tr><th scope="row"><span data-lang="lv">Ar vistu</span><span data-lang="en" hidden>With chicken</span></th><td class="pr"><span data-lang="lv">8,80&nbsp;€</span><span data-lang="en" hidden>€8.80</span></td><td class="pr"><span data-lang="lv">9,60&nbsp;€</span><span data-lang="en" hidden>€9.60</span></td></tr>
+            <tr><th scope="row"><span data-lang="lv">Ar garnelēm</span><span data-lang="en" hidden>With prawns</span></th><td class="pr"><span data-lang="lv">9,19&nbsp;€</span><span data-lang="en" hidden>€9.19</span></td><td class="pr"><span data-lang="lv">9,89&nbsp;€</span><span data-lang="en" hidden>€9.89</span></td></tr>
+            <tr><th scope="row"><span data-lang="lv">Mix ar visiem trim</span><span data-lang="en" hidden>Mix of all three</span></th><td class="pr"><span data-lang="lv">8,90&nbsp;€</span><span data-lang="en" hidden>€8.90</span></td><td class="pr"><span data-lang="lv">9,80&nbsp;€</span><span data-lang="en" hidden>€9.80</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dishes">
+      <figure class="dish">
+        <img src="img/rolls.jpg" width="1200" height="800" loading="lazy" alt="Trīs svaigi rullīši ar garnelēm uz zili balta šķīvja, blakus mērce, laims un čili" data-alt-en="Three fresh rolls with prawns on a blue and white plate, with sauce, lime and chili">
+        <figcaption>
+          <h3><span data-lang="lv">Svaigi pavasara rullīši ar garnelēm</span><span data-lang="en" hidden>Fresh spring rolls with prawns</span></h3>
+          <p><span data-lang="lv">Rīspapīrā ar salātiem, burkāniem un gurķiem, klāt zemesriekstu vai hoisin mērce.</span><span data-lang="en" hidden>In rice paper with lettuce, carrot and cucumber, with peanut or hoisin sauce.</span></p>
+        </figcaption>
+      </figure>
+      <div class="duo">
+      <figure class="dish">
+        <img src="img/green.jpg" width="1200" height="800" loading="lazy" alt="Zaļais karijs zili baltā bļodā, blakus rīsi uz šķīvja, irbulīši un laims" data-alt-en="Green curry in a blue and white bowl, with a plate of rice, chopsticks and lime">
+        <figcaption>
+          <h3><span data-lang="lv">Taizemes zaļais karijs</span><span data-lang="en" hidden>Thai green curry</span></h3>
+          <p><span data-lang="lv">Ar vistu un rīsiem.</span><span data-lang="en" hidden>With chicken and rice.</span></p>
+          <p class="pr"><span data-lang="lv">11,79&nbsp;€</span><span data-lang="en" hidden>€11.79</span></p>
+        </figcaption>
+      </figure>
+      <figure class="dish">
+        <img src="img/red.jpg" width="1200" height="800" loading="lazy" alt="Sarkanais karijs zili baltā bļodā, blakus rīsi, laims un koriandrs" data-alt-en="Red curry in a blue and white bowl, with rice, lime and coriander">
+        <figcaption>
+          <h3><span data-lang="lv">Taizemes sarkanais karijs</span><span data-lang="en" hidden>Thai red curry</span></h3>
+          <p><span data-lang="lv">Ar vistu un rīsiem.</span><span data-lang="en" hidden>With chicken and rice.</span></p>
+          <p class="pr"><span data-lang="lv">11,79&nbsp;€</span><span data-lang="en" hidden>€11.79</span></p>
+        </figcaption>
+      </figure>
+      </div>
+      <div class="lunch">
+        <div class="l-text">
+          <h3><span data-lang="lv">Pusdienu piedāvājums</span><span data-lang="en" hidden>Lunch offer</span></h3>
+          <p><span data-lang="lv">Darbdienās no 11:00 līdz 15:00 Wolt ēdienkartē ir komplekts: vistas zupa ar tomātiem un kraukšķīgā vista ar rīsiem un dārzeņiem.</span><span data-lang="en" hidden>On weekdays from 11:00 to 15:00 the Wolt menu has a set: chicken soup with tomatoes and crispy chicken with rice and vegetables.</span></p>
+          <p class="pr"><span data-lang="lv">10,90&nbsp;€</span><span data-lang="en" hidden>€10.90</span></p>
+        </div>
+        <figure class="dish">
+          <img src="img/chicken.jpg" width="1200" height="1066" loading="lazy" alt="Kraukšķīga vista ar mērci uz rīsiem zilā šķīvī, blakus gurķi un salāti" data-alt-en="Crispy chicken with sauce on rice on a blue plate, with cucumber and slaw">
+          <figcaption>
+            <h3><span data-lang="lv">Kraukšķīga vista ar rīsiem</span><span data-lang="en" hidden>Crispy chicken with rice</span></h3>
+            <p><span data-lang="lv">Panēta vista ar mērci, svaigi gurķi un salāti.</span><span data-lang="en" hidden>Breaded chicken with sauce, fresh cucumber and slaw.</span></p>
+            <p class="pr"><span data-lang="lv">11,89&nbsp;€</span><span data-lang="en" hidden>€11.89</span></p>
+          </figcaption>
+        </figure>
+        <figure class="dish">
+          <img src="img/spread.jpg" width="1200" height="900" loading="lazy" alt="Divi zili trauki no augšas: tomātu zupa ar vistu un koriandru un rīsi ar vistu un dārzeņiem" data-alt-en="Two blue dishes from above: tomato soup with chicken and coriander, and rice with chicken and vegetables">
+          <figcaption>
+            <h3><span data-lang="lv">Tomātu zupa ar vistu</span><span data-lang="en" hidden>Tomato soup with chicken</span></h3>
+            <p><span data-lang="lv">400 ml. Fotogrāfijā blakus arī vista ar rīsiem un dārzeņiem.</span><span data-lang="en" hidden>400 ml. Also in the photograph: chicken with rice and vegetables.</span></p>
+            <p class="pr"><span data-lang="lv">6,50&nbsp;€</span><span data-lang="en" hidden>€6.50</span></p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="after">
+      <p class="also"><span data-lang="lv">Ēdienkartē ir arī Tom Yum un Tom Kha zupas, wok nūdeles, Bun cha gio un pīles krūtiņa ar hoisin mērci.</span><span data-lang="en" hidden>The menu also has Tom Yum and Tom Kha soups, wok noodles, Bun cha gio and duck breast with hoisin sauce.</span></p>
+      <p class="small"><span data-lang="lv">Nosaukumi un cenas: SAPA ēdienkarte Wolt lapā, 05.10.2026. Restorānā cenas var atšķirties.</span><span data-lang="en" hidden>Names and prices: SAPA’s menu on Wolt, 05.10.2026. Prices at the restaurant may differ.</span></p>
+      <a class="btn dark" href="https://wolt.com/en/lva/riga/restaurant/sapa-vjetnamiesu-azijas-restorans" target="_blank" rel="noopener"><span data-lang="lv">Visa ēdienkarte Wolt lapā</span><span data-lang="en" hidden>Full menu on Wolt</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M3.5 2H10v6.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="guests" id="viesi">
+  <div class="wrap g-grid">
+    <div class="g-head">
+      <h2><span data-lang="lv">Ko saka viesi</span><span data-lang="en" hidden>What guests say</span></h2>
+    </div>
+    <div class="g-quotes">
+      <blockquote class="q">
+        <p><span data-lang="lv">„Ļoti forša, klusā vietā!!! Laipni darbinieki!!! Garšīgs ēdiens!!! Mājīga atmosfēra ar mūziku!!!”</span><span data-lang="en" hidden>“Really cool, in a quiet spot!!! Friendly staff!!! Tasty food!!! Cosy atmosphere with music!!!”</span></p>
+        <cite>Marianna K., Google<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      </blockquote>
+      <blockquote class="q">
+        <p><span data-lang="lv">„Ēdiens un apkalpošana- izcili<br>Ideāla kafijas garša un aromāts”</span><span data-lang="en" hidden>“Food and service: excellent<br>Perfect coffee taste and aroma”</span></p>
+        <cite>Ilze P., Google<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      </blockquote>
+    </div>
+    <dl class="scores">
+      <div><dt><span data-lang="lv">Google kartes, 141 atsauksme (20.09.2026)</span><span data-lang="en" hidden>Google Maps, 141 reviews (20.09.2026)</span></dt><dd><span data-lang="lv">4,3<small>no 5</small></span><span data-lang="en" hidden>4.3<small>of 5</small></span></dd></div>
+      <div><dt><span data-lang="lv">Wolt vērtējums (05.10.2026)</span><span data-lang="en" hidden>Wolt rating (05.10.2026)</span></dt><dd><span data-lang="lv">8,6<small>no 10</small></span><span data-lang="en" hidden>8.6<small>of 10</small></span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap v-grid">
+    <div>
+      <h2>Skolas iela 12</h2>
+      <p class="city"><span data-lang="lv">Rīgas centrs, LV-1010</span><span data-lang="en" hidden>Central Rīga, LV-1010</span></p>
+      <dl class="hours">
+        <div data-days="0 1 2 3 4"><dt><span data-lang="lv">Darbdienās</span><span data-lang="en" hidden>Weekdays</span></dt><dd>11:00–22:00</dd></div>
+        <div data-days="5 6"><dt><span data-lang="lv">Sestdien, svētdien</span><span data-lang="en" hidden>Saturday, Sunday</span></dt><dd>12:00–22:00</dd></div>
+      </dl>
+      <p class="open" data-open><i></i><span><span data-lang="lv">Katru dienu līdz 22:00</span><span data-lang="en" hidden>Every day until 22:00</span></span></p>
+      <p class="tel"><small><span data-lang="lv">Tālrunis</span><span data-lang="en" hidden>Phone</span></small><a href="tel:+37128326666">28&nbsp;326&nbsp;666</a></p>
+      <div class="acts">
+        <a class="btn" href="https://wolt.com/en/lva/riga/restaurant/sapa-vjetnamiesu-azijas-restorans" target="_blank" rel="noopener"><span data-lang="lv">Pasūtīt ar Wolt</span><span data-lang="en" hidden>Order on Wolt</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M3.5 2H10v6.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></a>
+        <a class="btn line" href="https://maps.google.com/?cid=4603360143934530660" target="_blank" rel="noopener"><span data-lang="lv">Atvērt kartē</span><span data-lang="en" hidden>Open the map</span></a>
+      </div>
+      <p class="src"><span data-lang="lv">Darba laiks un tālrunis: kā Google kartēs (20.09.2026) un Wolt lapā (05.10.2026).</span><span data-lang="en" hidden>Hours and phone: as shown on Google Maps (20.09.2026) and on Wolt (05.10.2026).</span></p>
+    </div>
+
+    <form class="table" id="galds" novalidate>
+      <h3><span data-lang="lv">Pieteikt galdiņu</span><span data-lang="en" hidden>Request a table</span></h3>
+      <p class="how"><span data-lang="lv">Norādiet, cik jūs būsiet un kad. <span class="ph">Ziņa atvērsies jūsu tālrunī kā SMS restorānam.</span><span class="dk">Gatavo ziņu nokopējiet un nosūtiet restorānam kā SMS.</span></span><span data-lang="en" hidden>Say how many of you and when. <span class="ph">The message opens on your phone as an SMS to the restaurant.</span><span class="dk">Copy the finished message and send it to the restaurant as an SMS.</span></span></p>
+      <div class="field">
+        <span class="lab"><span data-lang="lv">Cik jūs būsiet</span><span data-lang="en" hidden>How many of you</span></span>
+        <div class="step"><button type="button" id="tMinus" aria-label="Mazāk, fewer">−</button><output id="tN" aria-live="polite">2</output><button type="button" id="tPlus" aria-label="Vairāk, more">+</button></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="tDay"><span data-lang="lv">Diena</span><span data-lang="en" hidden>Day</span></label><input type="date" id="tDay"></div>
+        <div class="field"><label for="tTime"><span data-lang="lv">Laiks</span><span data-lang="en" hidden>Time</span></label><select id="tTime"></select></div>
+      </div>
+      <div class="field"><label for="tName"><span data-lang="lv">Vārds</span><span data-lang="en" hidden>Name</span></label><input type="text" id="tName" autocomplete="given-name" maxlength="40"></div>
+      <p class="msg" id="tMsg" aria-live="polite"></p>
+      <a class="btn" id="tSend" href="sms:+37128326666"><span class="ph"><span data-lang="lv">Sūtīt SMS</span><span data-lang="en" hidden>Send the SMS</span></span><span class="dk"><span data-lang="lv">Kopēt ziņas tekstu</span><span data-lang="en" hidden>Copy the message</span></span></a>
+      <p class="fine" id="tFine"><span data-lang="lv">Šis ir tikai pieprasījums: gaidiet restorāna atbildi. Lapa neko nesaglabā. Var arī zvanīt: <a href="tel:+37128326666">28&nbsp;326&nbsp;666</a>.</span><span data-lang="en" hidden>This is only a request; wait for the restaurant’s reply. The page stores nothing. You can also call <a href="tel:+37128326666">28&nbsp;326&nbsp;666</a>.</span></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap f-grid">
+    <div>
+      <div class="f-name">
+        <span class="mark">SAP<span class="cap">A<svg viewBox="0 0 44 20" aria-hidden="true"><g fill="currentColor"><path d="M27 1 1.7 11.6l7 1z"/><path d="M27 1 10.1 12.8l7 1z"/><path d="M27 1l-8.5 13 7 1z"/><path d="M27 1l-.1 14.2 7 1z"/><path d="M27 1l8.3 15.4 7 1z"/></g><path d="M1 12.4Q21 21 43 18.4" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/></svg></span></span>
+        <p class="f-own" lang="en">Part of Vietnam here in Latvia</p>
+        <p class="f-addr"><span data-lang="lv">Vjetnamiešu Āzijas restorāns<br>Skolas iela 12, Rīga, LV-1010</span><span data-lang="en" hidden>Vietnamese and Asian restaurant<br>Skolas iela 12, Rīga, LV-1010</span></p>
+      </div>
+      <p class="f-links">
+        <a href="https://wolt.com/en/lva/riga/restaurant/sapa-vjetnamiesu-azijas-restorans" target="_blank" rel="noopener">Wolt</a>
+        <a href="https://www.instagram.com/sapa_vietnam_restaurant/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61570451090222" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://maps.google.com/?cid=4603360143934530660" target="_blank" rel="noopener">Google Maps</a>
+      </p>
+    </div>
+    <div class="f-note">
+      <p><span data-lang="lv"><b>Šī lapa ir dizaina priekšlikums.</b> To sagatavoja Nikita, tā nav SAPA oficiālā vietne un restorāns to nav pasūtījis. Saziņai: <a href="mailto:ngoloveckis@gmail.com">ngoloveckis@gmail.com</a>.</span><span data-lang="en" hidden><b>This page is a design proposal.</b> It was made by Nikita; it is not SAPA’s official website and the restaurant did not commission it. Contact: <a href="mailto:ngoloveckis@gmail.com">ngoloveckis@gmail.com</a>.</span></p>
+      <p><span data-lang="lv">Fotogrāfijas: SAPA Vjetnamiešu Asia restaurant (Google kartes). Vārds augšā ir salikts burtiem, tas nav restorāna logotips.</span><span data-lang="en" hidden>Photographs: SAPA Vjetnamiešu Asia restaurant (Google Maps). The name at the top is set in type; it is not the restaurant’s logo.</span></p>
+      <p><span data-lang="lv">Fakti: Google kartes (20.09.2026) un restorāna Wolt lapa (05.10.2026), no kuras ņemti ēdienu nosaukumi, cenas, phở apraksts un teikums zem nosaukuma. Tālrunis un darba laiks abās vietās sakrīt. Restorāna Facebook aprakstā, kā to rāda foodyas.com, ir cits tālrunis un īsāks darba laiks.</span><span data-lang="en" hidden>Facts: Google Maps (20.09.2026) and the restaurant’s Wolt page (05.10.2026), which gave the dish names, prices, the phở description and the line under the name. Phone and hours are the same in both. The restaurant’s Facebook description, as mirrored by foodyas.com, lists a different phone and shorter hours.</span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)}, $$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  var PHONE="+37128326666";
+  // Google Maps 20.09.2026, the same on Wolt 05.10.2026. Monday first; minutes from midnight.
+  var HOURS=[[660,1320],[660,1320],[660,1320],[660,1320],[660,1320],[720,1320],[720,1320]];
+  var T={
+    lv:{open:"Atvērts līdz ",soon:"Slēgts, atveras šodien plkst. ",tomorrow:"Slēgts, atveras rīt plkst. ",
+        hello:"Labdien! Vēlos pieteikt galdiņu SAPA restorānā.",guests:"Personas: ",when:"Kad: ",at:", plkst. ",name:"Vārds: ",
+        bye:"Lūdzu, apstipriniet, atbildot uz šo ziņu. Paldies!",need:"Ierakstiet savu vārdu",
+        copied:"Ziņas teksts nokopēts. Nosūtiet to uz 28 326 666 no sava tālruņa.",
+        nocopy:"Nokopējiet ziņas tekstu un nosūtiet to uz 28 326 666.",ph:"Jūsu vārds",nav:"Lapas daļas",loc:"lv-LV"},
+    en:{open:"Open until ",soon:"Closed, opens today at ",tomorrow:"Closed, opens tomorrow at ",
+        hello:"Hello! I would like to request a table at SAPA.",guests:"Guests: ",when:"When: ",at:", ",name:"Name: ",
+        bye:"Please confirm by replying to this message. Thank you!",need:"Please add your name",
+        copied:"Message copied. Send it to 28 326 666 from your phone.",
+        nocopy:"Copy the message text and send it to 28 326 666.",ph:"Your name",nav:"Page sections",loc:"en-GB"}
+  };
+  var lang="lv";
+  function hm(m){return ("0"+Math.floor(m/60)).slice(-2)+":"+("0"+m%60).slice(-2)}
+
+  // Rīga time, whatever the visitor's own clock says
+  function riga(){
+    var d=new Date(), o={};
+    try{
+      new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Riga",weekday:"short",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false})
+        .formatToParts(d).forEach(function(p){o[p.type]=p.value});
+      var wd=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].indexOf(o.weekday);
+      return {wd:wd,min:(+o.hour%24)*60+(+o.minute),iso:o.year+"-"+o.month+"-"+o.day};
+    }catch(e){
+      return {wd:(d.getDay()+6)%7,min:d.getHours()*60+d.getMinutes(),iso:d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)};
+    }
+  }
+  function renderOpen(){
+    var n=riga(), h=HOURS[n.wd], t=T[lang], txt, isOpen=n.min>=h[0]&&n.min<h[1];
+    if(isOpen) txt=t.open+hm(h[1]);
+    else if(n.min<h[0]) txt=t.soon+hm(h[0]);
+    else txt=t.tomorrow+hm(HOURS[(n.wd+1)%7][0]);
+    $$("[data-open]").forEach(function(el){el.classList.toggle("is-open",isOpen);el.lastElementChild.textContent=txt});
+    $$(".hours div").forEach(function(r){r.classList.toggle("today",r.getAttribute("data-days").split(" ").indexOf(String(n.wd))>-1)});
+  }
+
+  // table request
+  var nEl=$("#tN"), day=$("#tDay"), time=$("#tTime"), nameEl=$("#tName"), msgEl=$("#tMsg"), send=$("#tSend"), fine=$("#tFine"), count=2, fineHtml=null;
+  function addDays(iso,k){var p=iso.split("-"),d=new Date(+p[0],+p[1]-1,+p[2]+k,12);return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+  function dateOf(iso){var p=iso.split("-");return new Date(+p[0],+p[1]-1,+p[2],12)}
+  function fillTimes(){
+    var n=riga(), iso=day.value||n.iso, wd=(dateOf(iso).getDay()+6)%7, h=HOURS[wd], keep=time.value, from=h[0];
+    if(iso===n.iso) from=Math.max(from,Math.ceil((n.min+30)/30)*30);
+    time.innerHTML="";
+    for(var m=from;m<=h[1]-60;m+=30){var o=document.createElement("option");o.value=o.textContent=hm(m);time.appendChild(o)}
+    if(keep&&[].some.call(time.options,function(o){return o.value===keep})) time.value=keep;
+    else if([].some.call(time.options,function(o){return o.value==="19:00"})) time.value="19:00";
+  }
+  function message(){
+    var t=T[lang], d=dateOf(day.value), when;
+    try{when=new Intl.DateTimeFormat(t.loc,{weekday:"long",day:"numeric",month:"long"}).format(d)}catch(e){when=day.value}
+    var lines=[t.hello,t.guests+count,t.when+when+t.at+time.value];
+    if(nameEl.value.trim()) lines.push(t.name+nameEl.value.trim());
+    lines.push(t.bye);
+    return lines.join("\n");
+  }
+  function renderMsg(){
+    if(!day.value||!time.value){msgEl.textContent="";return}
+    var m=message();
+    msgEl.textContent=m;
+    send.href="sms:"+PHONE+"?&body="+encodeURIComponent(m);
+    nameEl.placeholder=T[lang].ph;
+  }
+  function initForm(){
+    var n=riga(), start=n.iso;
+    if(n.min+30>HOURS[n.wd][1]-120) start=addDays(n.iso,1); // late evening: offer tomorrow
+    day.min=n.iso; day.value=start;
+    fillTimes(); renderMsg();
+  }
+  $("#tMinus").addEventListener("click",function(){count=Math.max(1,count-1);nEl.textContent=count;renderMsg()});
+  $("#tPlus").addEventListener("click",function(){count=Math.min(20,count+1);nEl.textContent=count;renderMsg()});
+  day.addEventListener("change",function(){
+    var today=riga().iso;
+    if(!day.value||day.value<today) day.value=today;
+    fillTimes();
+    if(!time.options.length){day.value=addDays(day.value,1);fillTimes()} // too late for today
+    renderMsg();
+  });
+  time.addEventListener("change",renderMsg);
+  nameEl.addEventListener("input",function(){nameEl.classList.remove("need");renderMsg()});
+  send.addEventListener("click",function(e){
+    if(!nameEl.value.trim()){e.preventDefault();nameEl.classList.add("need");nameEl.placeholder=T[lang].need;nameEl.focus();return}
+    if(window.matchMedia("(hover:hover) and (pointer:fine) and (min-width:861px)").matches){ // a laptop has nowhere to send an SMS from: hand over the text instead
+      e.preventDefault();
+      var say=function(key){if(fineHtml===null)fineHtml=fine.innerHTML;fine.textContent=T[lang][key]};
+      var settled=false;
+      var ok=function(){settled=true;say("copied")};
+      var no=function(){ // nothing was copied: say so, and select the text so it can be copied by hand
+        settled=true;say("nocopy");
+        try{var r=document.createRange();r.selectNodeContents(msgEl);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}catch(err){}
+      };
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(message()).then(ok,no);
+        setTimeout(function(){if(!settled)no()},1500); // a browser that never answers counts as not copied
+      } else no();
+    }
+  });
+
+  // language
+  var alts=$$("img[data-alt-en]"); alts.forEach(function(im){im.setAttribute("data-alt-lv",im.alt)});
+  function setLang(l,keep){
+    lang=l==="en"?"en":"lv";
+    document.documentElement.lang=lang;
+    document.title=lang==="en"?"SAPA, Vietnamese and Asian restaurant in Rīga (design proposal)":"SAPA, vjetnamiešu un Āzijas restorāns Rīgā (dizaina priekšlikums)";
+    $$("[data-lang]").forEach(function(el){el.hidden=el.getAttribute("data-lang")!==lang});
+    $$("[data-set]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-set")===lang))});
+    alts.forEach(function(im){im.alt=im.getAttribute("data-alt-"+lang)});
+    $(".nav").setAttribute("aria-label",T[lang].nav);
+    if(fineHtml!==null){fine.innerHTML=fineHtml;fineHtml=null;$$("#tFine [data-lang]").forEach(function(el){el.hidden=el.getAttribute("data-lang")!==lang})}
+    renderOpen(); renderMsg();
+    if(keep){try{localStorage.setItem("sapa-lang",lang)}catch(e){}}
+  }
+  $$("[data-set]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-set"),true)})});
+  var asked=null, saved=null;
+  try{asked=new URLSearchParams(location.search).get("lang")}catch(e){}
+  try{saved=localStorage.getItem("sapa-lang")}catch(e){}
+  initForm();
+  setLang(asked||saved||"lv",!!asked);
+  setInterval(renderOpen,60000);
+
+})();
+</script>
+</body>
+</html>
